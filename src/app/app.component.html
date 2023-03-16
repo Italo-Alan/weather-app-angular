@@ -1,12 +1,18 @@
+<div class="search">
+  <form>
+    <input type="text" placeholder="Digite o nome da cidade">
+  </form>
+</div>
+
 <div class="container">
   <div class="upper-data">
     <img src="../assets/Mountains.jfif" alt="Cold image" >
-    <!-- <img src="../assets/download.jpeg.jfif" alt="Heat image" > -->
+    <img src="../assets/download.jpeg.jfif" alt="Heat image" >
     <!-- <img src="../assets/Giancarlo Volpe.png" alt="Heat image" > -->
 
     <div class="weather-data">
-      <div class="location">São Paulo</div>
-      <div class="temperature">{{ 14 }}ºC</div>
+      <div class="location"> São Paulo </div>
+      <div class="temperature">{{57.63 | number: '1.0-0' }}  ºC</div>
     </div>
   </div>
 
@@ -21,7 +27,7 @@
           <span>Min</span>
         </div>
         <div class="info-block-value">
-          10ºC
+          {{ 51.75 | number: '1.0-0' }}ºC
         </div>
       </div>
 
@@ -31,7 +37,7 @@
           <span>Max</span>
         </div>
         <div class="info-block-value">
-          35ºC
+          {{64.38 | number: '1.0-0'}} ºC
         </div>
       </div>
 
@@ -41,7 +47,7 @@
           <span>Humidity</span>
         </div>
         <div class="info-block-value">
-          75%
+           70%
         </div>
       </div>
 
@@ -51,7 +57,7 @@
           <span>Wind</span>
         </div>
         <div class="info-block-value">
-          11 Km/h
+            1020 Km/h
         </div>
       </div>
     </div>

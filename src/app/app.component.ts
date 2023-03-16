@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WeatherData } from './models/weather.model';
 import { WeatherService } from './services/weather.service';
 
 @Component({
@@ -11,11 +12,14 @@ export class AppComponent implements OnInit{
 
   constructor(private weatherService: WeatherService){}
 
+  weatherData?: WeatherData;
+
   ngOnInit(): void{
     this.weatherService.getWeatherData('sao paulo')
     .subscribe({
       next: (response) => {
-        console.log(response);
+        this.weatherData = response;
+        console.log(this.weatherData);
       }
     })
   }
