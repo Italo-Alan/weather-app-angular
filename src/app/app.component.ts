@@ -15,12 +15,9 @@ export class AppComponent implements OnInit{
   weatherData?: WeatherData;
 
   ngOnInit(): void{
-    this.weatherService.getWeatherData('sao paulo')
-    .subscribe({
-      next: (response) => {
-        this.weatherData = response;
-        console.log(this.weatherData);
-      }
+    this.weatherService.getWeatherData()
+    .subscribe(response =>{
+      console.log(response);
     })
   }
 }
