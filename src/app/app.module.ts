@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 @NgModule({
   declarations: [
     AppComponent
