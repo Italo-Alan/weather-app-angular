@@ -4,15 +4,15 @@
   </form>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="weatherData">
   <div class="upper-data">
-    <img src="../assets/Mountains.jfif" alt="Cold image" >
-    <img src="../assets/download.jpeg.jfif" alt="Heat image" >
-    <!-- <img src="../assets/Giancarlo Volpe.png" alt="Heat image" > -->
+    <img src="../assets/Mountains.jfif" alt="Heat image" *ngIf="weatherData.main.temp > 20">
+    <img src="../assets/download.jpeg.jfif" alt="Cold image" *ngIf="weatherData.main.temp <= 20">
+    <img src="../assets/Giancarlo Volpe.png" alt="Heat image" *ngIf="">
 
     <div class="weather-data">
-      <div class="location"> São Paulo </div>
-      <div class="temperature">{{57.63 | number: '1.0-0' }}  ºC</div>
+      <div class="location">{{weatherData.name}}</div>
+      <div class="temperature">{{weatherData.main.temp | number: '1.0-0'}} ºC</div>
     </div>
   </div>
 
@@ -27,7 +27,7 @@
           <span>Min</span>
         </div>
         <div class="info-block-value">
-          {{ 51.75 | number: '1.0-0' }}ºC
+          {{ weatherData.main.temp_min | number: '1.0-0'}} ºC
         </div>
       </div>
 
@@ -37,7 +37,7 @@
           <span>Max</span>
         </div>
         <div class="info-block-value">
-          {{64.38 | number: '1.0-0'}} ºC
+          {{weatherData.main.temp_max | number: '1.0-0'}} ºC
         </div>
       </div>
 
@@ -47,7 +47,7 @@
           <span>Humidity</span>
         </div>
         <div class="info-block-value">
-           70%
+           {{weatherData.main.humidity}}%
         </div>
       </div>
 
@@ -57,7 +57,16 @@
           <span>Wind</span>
         </div>
         <div class="info-block-value">
-            1020 Km/h
+           {{weatherData.wind.speed | number: '1.0-0'}} Km/h
+        </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/wind.png" alt="">
+          <span>Wind</span>
+        </div>
+        <div class="info-block-value">
+           {{weatherData.weather[0].icon}} Km/h
         </div>
       </div>
     </div>

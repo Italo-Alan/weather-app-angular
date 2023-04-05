@@ -1,3 +1,5 @@
+export module WeatherService{
+}
 export interface WeatherData {
   coord: Coord
   weather: Weather[]
@@ -13,6 +15,7 @@ export interface WeatherData {
   name: string
   cod: number
 }
+
 
 export interface Coord {
   lon: number
