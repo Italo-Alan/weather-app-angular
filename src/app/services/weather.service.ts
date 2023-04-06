@@ -17,8 +17,8 @@ export class WeatherService {
   LANG = environment.LANG;
 
   constructor(private http: HttpClient) { }
-  getWeatherData(){
-    return this.http.get<WeatherData>(`${this.API_URL}São Paulo&appid=${this.API_KEY}&units=${this.UNITS}&lang=${this.LANG}`);
+  getWeatherData(city: String){
+    return this.http.get<WeatherData>(`${this.API_URL}${city}&appid=${this.API_KEY}&units=${this.UNITS}&lang=${this.LANG}`);
   }
 
 }
