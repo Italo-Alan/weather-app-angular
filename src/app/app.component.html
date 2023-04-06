@@ -63,12 +63,23 @@
       <div class="info-block">
         <div class="info-block-label">
           <img src="../assets/wind.png" alt="">
-          <span>Wind</span>
+          <span>Pressure</span>
         </div>
         <div class="info-block-value">
-           {{weatherData.weather[0].icon}} Km/h
+           {{weatherData.main.pressure}} mb
         </div>
       </div>
+
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../assets/wind.png" alt="">
+          <span>Visibility</span>
+        </div>
+        <div class="info-block-value">
+           {{ (weatherData.visibility).toString().slice(0,2) | number}} Km
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
