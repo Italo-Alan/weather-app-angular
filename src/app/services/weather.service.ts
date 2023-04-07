@@ -10,7 +10,7 @@ import { WeatherData } from '../models/weather.model';
   providedIn: 'root'
 })
 export class WeatherService {
-  API_BASE_URL: String = 'http://api.openweathermap.org/data/2.5/weather?q='
+  API_BASE_URL: String = 'https://api.openweathermap.org/data/2.5/weather?q='
   API_KEY: String = '1419820775eaf67d81bdaeb18adafa16'
   UNITS: String ='metric'
   LANG: String ='pt_br'
