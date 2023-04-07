@@ -2,7 +2,6 @@ import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { WeatherData } from '../models/weather.model';
 
 
@@ -11,14 +10,9 @@ import { WeatherData } from '../models/weather.model';
   providedIn: 'root'
 })
 export class WeatherService {
-  API_URL = environment.API_BASE_URL;
-  API_KEY = environment.API_KEY;
-  UNITS = environment.UNITS;
-  LANG = environment.LANG;
-
   constructor(private http: HttpClient) { }
   getWeatherData(city: String){
-    return this.http.get<WeatherData>(`${this.API_URL}${city}&appid=${this.API_KEY}&units=${this.UNITS}&lang=${this.LANG}`);
+    return this.http.get<WeatherData>(`${environment.API_BASE_URL}${city}&appid=${environment.API_KEY}&units=${environment.UNITS}&lang=${environment.LANG}`);
   }
 
 }
