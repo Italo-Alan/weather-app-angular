@@ -29,6 +29,7 @@ export class AppComponent implements OnInit{
   public getWeatherData(cityName: String){
     this.weatherService.getWeatherData(cityName)
     .subscribe(response =>{
+      console.log(response);
       this.weatherData = response;
     })
   }

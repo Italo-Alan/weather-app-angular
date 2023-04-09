@@ -8,11 +8,12 @@
   <div class="upper-data">
     <img src="../assets/Mountains.jfif" alt="Heat image" *ngIf="weatherData.main.temp > 20">
     <img src="../assets/download.jpeg.jfif" alt="Cold image" *ngIf="weatherData.main.temp <= 20">
-    <img src="../assets/Giancarlo Volpe.png" alt="Heat image" *ngIf="">
+    <img src="../assets/Giancarlo Volpe.png" alt="Heat image" *ngIf="weatherData.weather[0].main == 'Rain' ">
 
     <div class="weather-data">
       <div class="location">{{weatherData.name}}</div>
       <div class="temperature">{{weatherData.main.temp | number: '1.0-0'}} ºC</div>
+      <div class="description">{{weatherData.weather[0].description}}</div>
     </div>
   </div>
 
