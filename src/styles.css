@@ -79,7 +79,7 @@ body {
 .location{
   color: var(--white);
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .temperature{
@@ -91,9 +91,17 @@ body {
 
 .description{
   color: var(--white);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
   font-weight: 300;
+}
+
+.data{
+  color: var(--white);
+  font-size: 0.9rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .more-info-label{

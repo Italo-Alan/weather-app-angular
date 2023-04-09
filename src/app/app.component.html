@@ -13,7 +13,8 @@
     <div class="weather-data">
       <div class="location">{{weatherData.name}}</div>
       <div class="temperature">{{weatherData.main.temp | number: '1.0-0'}} ºC</div>
-      <div class="description">{{weatherData.weather[0].description}}</div>
+      <div class="description">{{ (weatherData.weather[0].description)[0].toUpperCase() + weatherData.weather[0].description.substr(1)}}</div>
+      <div class="data">{{ dataFormatada }}</div>
     </div>
   </div>
 
